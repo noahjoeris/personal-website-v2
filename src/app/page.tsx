@@ -4,7 +4,9 @@ import { ProjectCard } from '@/components/project-card'
 import { ResumeCard } from '@/components/resume-card'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
+import ShineBorder from '@/components/ui/shine-border'
 import { DATA } from '@/data/resume'
+import Image from 'next/image'
 import Markdown from 'react-markdown'
 
 const BLUR_FADE_DELAY = 0.04
@@ -13,15 +15,19 @@ export default function Page() {
   return (
     <main className="flex min-h-[100dvh] flex-col space-y-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="flex justify-between gap-2">
-            <div className="flex flex-1 flex-col space-y-1.5">
+        <div className="mx-auto w-full max-w-3xl space-y-8">
+          <div className="flex flex-wrap justify-between gap-2">
+            <div className="flex flex-1 flex-col items-center space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="font-bold tracking-tighter sm:text-xl xl:text-2xl/none"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(' ')[0]} 👋`}
+                text={`Heya 👋`}
               />
+
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <Image src={'/signature.png'} alt={DATA.name} width={400} height={400} />
+              </BlurFade>
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
                 delay={BLUR_FADE_DELAY}
@@ -29,10 +35,16 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <ShineBorder
+                className="py-6"
+                borderRadius={1000}
+                color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+              >
+                <Avatar className="size-60 border">
+                  <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                </Avatar>
+              </ShineBorder>
             </BlurFade>
           </div>
         </div>
