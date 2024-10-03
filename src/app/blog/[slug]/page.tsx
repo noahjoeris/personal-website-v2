@@ -1,31 +1,26 @@
-import { getBlogPosts, getPost } from "@/data/blog";
-import { DATA } from "@/data/resume";
-import { formatDate } from "@/utils/datetime";
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { Suspense } from "react";
+import { getBlogPosts, getPost } from '@/data/blog'
+import { DATA } from '@/data/resume'
+import { formatDate } from '@/utils/datetime'
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { Suspense } from 'react'
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  const posts = await getBlogPosts()
+  return posts.map(post => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({
   params,
 }: {
   params: {
-    slug: string;
-  };
+    slug: string
+  }
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  let post = await getPost(params.slug)
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  let { title, publishedAt: publishedTime, summary: description, image } = post.metadata
+  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`
 
   return {
     title,
@@ -33,7 +28,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      type: "article",
+      type: 'article',
       publishedTime,
       url: `${DATA.url}/blog/${post.slug}`,
       images: [
@@ -43,25 +38,25 @@ export async function generateMetadata({
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title,
       description,
       images: [ogImage],
     },
-  };
+  }
 }
 
 export default async function Blog({
   params,
 }: {
   params: {
-    slug: string;
-  };
+    slug: string
+  }
 }) {
-  let post = await getPost(params.slug);
+  let post = await getPost(params.slug)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -71,8 +66,8 @@ export default async function Blog({
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
             headline: post.metadata.title,
             datePublished: post.metadata.publishedAt,
             dateModified: post.metadata.publishedAt,
@@ -82,16 +77,16 @@ export default async function Blog({
               : `${DATA.url}/og?title=${post.metadata.title}`,
             url: `${DATA.url}/blog/${post.slug}`,
             author: {
-              "@type": "Person",
+              '@type': 'Person',
               name: DATA.name,
             },
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
+      <h1 className="title max-w-[650px] text-2xl font-medium tracking-tighter">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
+      <div className="mb-8 mt-2 flex max-w-[650px] items-center justify-between text-sm">
         <Suspense fallback={<p className="h-5" />}>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
             {formatDate(post.metadata.publishedAt)}
@@ -103,5 +98,5 @@ export default async function Blog({
         dangerouslySetInnerHTML={{ __html: post.source }}
       ></article>
     </section>
-  );
+  )
 }

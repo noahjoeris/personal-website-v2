@@ -1,6 +1,6 @@
-import { GlobeIcon, MailIcon } from "lucide-react";
+import { GlobeIcon, MailIcon } from 'lucide-react'
 
-export type IconProps = React.HTMLAttributes<SVGElement>;
+export type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
   globe: (props: IconProps) => <GlobeIcon {...props} />,
@@ -168,11 +168,7 @@ export const Icons = {
     </svg>
   ),
   whatsapp: (props: IconProps) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 175.216 175.552"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" {...props}>
       <defs>
         <linearGradient
           id="b"
@@ -220,4 +216,4 @@ export const Icons = {
       />
     </svg>
   ),
-};
+}
