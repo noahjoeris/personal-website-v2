@@ -7,7 +7,7 @@ export const DATA = {
   url: 'https://noahjoeris.com',
   location: 'Sofia, Bulgaria',
   locationLink: '',
-  description: 'Fullstack blockchain engineer',
+  role: 'Fullstack Blockchain Engineer',
   summary:
     "Hello, I'm Noah, a software magician at Velocity Labs, specializing in React and Rust. I'm responsible for building amazing apps and tools that boost the adoption of the Polkadot ecosystem. I also graduated from the Polkadot Blockchain Academy 2024 in Hong Kong, where I formed valuable connections in the web3 industry. Previously, I worked at Airbus Defence and Space for almost 5 years, contributing to various departments, including cyber security, cloud, and blockchain projects. I engineered numerous software applications there and developed extensively in React. I hold a Bachelor of Science in Computer Science and Cyber Security from Darmstadt University of Applied Sciences. Besides, I really enjoy calisthenics, cold plunges, biohacking, reading, and occasionally gaming. I'm always happy to connect with new people – just reach out.",
   avatarUrl: '/me.jpg',

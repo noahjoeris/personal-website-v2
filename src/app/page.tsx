@@ -16,25 +16,29 @@ export default function Page() {
     <main className="flex min-h-[100dvh] flex-col space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-3xl space-y-8">
-          <div className="flex flex-wrap justify-between gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 md:justify-between">
             <div className="flex flex-1 flex-col items-center space-y-1.5">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
                 className="font-bold tracking-tighter sm:text-xl xl:text-2xl/none"
                 yOffset={8}
-                text={`Heya 👋`}
+                text={'Heya 👋'}
               />
 
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <Image src={'/signature.png'} alt={DATA.name} width={400} height={400} />
               </BlurFade>
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+
+              <BlurFade
+                className="flex max-w-[600px] flex-col items-center justify-center pt-4 font-bold"
                 delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              >
+                <span>{DATA.role}</span>
+                {<Image src={'/polkadot.svg'} alt={'polkadot'} width={160} height={160} />}
+              </BlurFade>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
+
+            <BlurFade className="self-center" delay={BLUR_FADE_DELAY}>
               <ShineBorder
                 className="py-6"
                 borderRadius={1000}
