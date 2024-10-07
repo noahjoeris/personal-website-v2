@@ -109,15 +109,15 @@ export const DATA = {
     {
       school: 'Darmstadt University of Applied Sciences',
       href: '',
-      degree: 'Bachelor of Science in Computer Science/Cyber Security',
+      degree: 'Bachelor of Science in Computer Science/Cyber Security, Grade: 1.6 (German GPA)',
       logoUrl: 'hda.png',
       start: 'Oct 2019',
       end: 'Mar 2023',
     },
     {
-      school: 'AJC Gymnasium (High School specializing in Computer Science)',
+      school: 'AJC BK (High School in Computer Science)',
       href: '',
-      degree: 'Bachelor of Science in Computer Science/Cyber Security',
+      degree: 'Abitur, Grade: 1.9 (German GPA)',
       logoUrl: 'ajc.jpg',
       start: 'Jul 2016',
       end: 'Jul 2019',
