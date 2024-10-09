@@ -100,28 +100,31 @@ export const DATA = {
   education: [
     {
       school: 'Polkadot Blockchain Academy',
-      degree: 'Top 10 Graduate',
+      degree: 'Top 10 Graduate - Hong Kong',
       logoUrl: 'pba.jpeg',
       start: 'Jan 2024',
       end: 'Feb 2024',
-      description: 'Polkadot Blockchain Academy',
+      description:
+        '- Intense blockchain bootcamp sponsored by the Polkadot DAO creating new world class engineers for the ecosystem \n - 270 hours of classes and exams about cryptography, blockchains, Substrate and Rust programming',
     },
     {
       school: 'Darmstadt University of Applied Sciences',
-      degree: 'Bachelor of Science in Computer Science/Cyber Security, Grade: 1.6 (German GPA)',
+      degree:
+        'Bachelor in Computer Science/Cyber Security - Grade 1.6 (German GPA) - Darmstadt, Germany',
       logoUrl: 'hda.png',
       start: 'Oct 2019',
       end: 'Mar 2023',
       description:
-        '- Wrote my bachelor thesis about a security evaluation of blockchain-based audit log storage.',
+        '- Wrote my bachelor thesis about a security evaluation of blockchain-based audit log storage. \n - Wrote 2 research papers called: "How to Make Public Blockchains Scale" and "How Clean Code Improves the Quality of Software"',
     },
     {
       school: 'AJC BK (High School in Computer Science)',
-      degree: 'Abitur, Grade: 1.9 (German GPA)',
+      degree: 'Abitur - Grade 1.9 (German GPA) - Ratingen, Germany',
       logoUrl: 'ajc.jpg',
       start: 'Jul 2016',
       end: 'Jul 2019',
-      description: 'Polkadot Blockchain Academy',
+      description:
+        '- This high school, focused on computer science and mathematics, prepared me for university early on\n- We had intense programming classes in Java, C#, and C\n- Other subjects included: Discrete Mathematics, Electrical Engineering, Networking, Database Systems and Microcontroller Programming',
     },
   ],
   projects: [
