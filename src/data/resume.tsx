@@ -19,7 +19,20 @@ export const DATA = {
   Besides, I really enjoy calisthenics, cold plunges, biohacking, reading, and occasionally gaming. \
   I'm always happy to connect with new people – just reach out.",
   avatarUrl: '/me.jpg',
-  skills: ['React', 'Next.js', 'Typescript', 'Python', 'Docker'],
+  skills: [
+    'Blockchain',
+    'Polkadot',
+    'Substrate',
+    'Cryptography',
+    'Solidity',
+    'Rust',
+    'Typescript',
+    'Python',
+    'React',
+    'Next.js',
+    'Docker',
+    'AWS',
+  ],
   navbar: [
     { href: '/', icon: HomeIcon, label: 'Home' },
     { href: '/blog', icon: NotebookIcon, label: 'Blog' },
