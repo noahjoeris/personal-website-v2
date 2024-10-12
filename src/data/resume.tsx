@@ -14,15 +14,11 @@ export const DATA = {
   companyLogoUrlDark: '/polkadot-white.svg',
 
   summary:
-    "Hello, I'm Noah, a software magician at Velocity Labs, specializing in React and Rust. \
-  I'm responsible for building amazing apps and tools that boost the adoption of the Polkadot ecosystem.\n\n\
-  I graduated from the Polkadot Blockchain Academy 2024 in Hong Kong, where I formed valuable connections \
-  in the web3 industry. Previously, I worked at Airbus Defence and Space for almost 5 years, contributing to \
-  various departments, including cyber security, cloud, and blockchain projects. I engineered numerous software \
-  applications there and developed extensively in React.\n\n\
-  I hold a Bachelor in Computer Science and Cyber Security from Darmstadt University of Applied Sciences.\n\n\
-  Besides, I really enjoy calisthenics, cold plunges, biohacking, reading, and occasionally gaming. \
-  I'm always happy to connect with new people – just reach out.",
+    "Hey, I’m Noah, a freelance software engineer specializing in React and Rust within the Polkadot ecosystem. I’m driven by the vision of building the future of Web3, and I currently work at Velocity Labs, where I’ve been developing 'Turtle' - a universal bridge app for Polkadot, addressing fragmented UX and DevEx of the ecosystem.\n\n\
+  I’ve been deeply involved in the crypto space since 2021, exploring different blockchains, hardware wallets, and dApps. After graduating from the Polkadot Blockchain Academy in early 2024, where I was mentored by core Polkadot developers, I became convinced that Polkadot embodies the Web3 values I stand by: resilience, decentralization, governance, and scalability.\n\n\
+  I’m on a mission to contribute to this decentralized web, with less trust and more truth. A web free from big tech gatekeeping, with a financial layer that ensures equal access for everyone - protecting human freedom at its core.\n\n\
+  Before joining the Polkadot ecosystem, I spent nearly 5 years at Airbus, where I contributed to projects in cybersecurity, cloud computing, and blockchain. I engineered software solutions, particularly in React, and helped innovate across several departments.\n\n\
+  Outside of work, I’m dedicated to calisthenics, cold plunges, and biohacking, constantly exploring ways to improve myself. I also study Stoic philosophy, which fuels my approach to life and work. I'm always happy to connect with new people - so feel free to reach out!",
   avatarUrl: '/me.jpg',
   skills: [
     'Blockchain',
