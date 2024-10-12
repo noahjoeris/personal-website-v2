@@ -15,6 +15,10 @@ type Metadata = {
 }
 
 function getMDXFiles(dir: string) {
+  if (!fs.existsSync(dir)) {
+    console.warn(`Directory ${dir} does not exist.`)
+    return []
+  }
   return fs.readdirSync(dir).filter(file => path.extname(file) === '.mdx')
 }
 
@@ -50,6 +54,12 @@ export async function getPost(slug: string) {
 
 async function getAllPosts(dir: string) {
   let mdxFiles = getMDXFiles(dir)
+
+  if (mdxFiles.length === 0) {
+    console.warn(`No MDX files found in the directory ${dir}.`)
+    return []
+  }
+
   return Promise.all(
     mdxFiles.map(async file => {
       let slug = path.basename(file, path.extname(file))
