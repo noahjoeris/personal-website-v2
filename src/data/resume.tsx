@@ -8,6 +8,7 @@ export const DATA = {
   location: 'Sofia, Bulgaria',
   locationLink: '',
   role: 'Fullstack Blockchain Engineer',
+  companyLogoUrl: '/polkadot.svg',
   summary:
     "Hello, I'm Noah, a software magician at Velocity Labs, specializing in React and Rust. \
   I'm responsible for building amazing apps and tools that boost the adoption of the Polkadot ecosystem.\n\n\
@@ -143,11 +144,19 @@ export const DATA = {
   projects: [
     {
       title: 'Turtle',
-      href: 'https://turtle.cool',
+      href: 'https://app.turtle.cool',
       dates: 'May 2024 - Present',
       active: true,
       description: 'Universal token transfer app for the Polkadot ecosystem.',
-      technologies: ['Next.js', 'Typescript', 'React', 'TailwindCSS', 'Shadcn UI', 'Polkadot'],
+      technologies: [
+        'Typescript',
+        'React',
+        'Next.js',
+        'TailwindCSS',
+        'Shadcn UI',
+        'Polkadot',
+        'XCM',
+      ],
       links: [
         {
           type: 'Website',
@@ -165,7 +174,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: '',
+      image: '/turtle-screenshot.webp',
       video: '',
     },
   ],

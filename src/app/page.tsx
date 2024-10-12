@@ -34,7 +34,9 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
               >
                 <span>{DATA.role}</span>
-                {<Image src={'/polkadot.svg'} alt={'polkadot'} width={160} height={160} />}
+                {DATA.companyLogoUrl && (
+                  <Image src={DATA.companyLogoUrl} alt={'company logo'} width={160} height={160} />
+                )}
               </BlurFade>
             </div>
 
