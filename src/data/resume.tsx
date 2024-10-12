@@ -181,5 +181,24 @@ export const DATA = {
       image: '/turtle-screenshot.webp',
       video: '',
     },
+
+    {
+      title: 'Innovation Hub',
+      href: '',
+      dates: 'Apr 2023 - Apr 2024',
+      active: false,
+      description:
+        'I designed and developed an internal knowledge-sharing platform at Airbus, facilitating collaboration between experts, managers, and project initiators across innovative projects. The platform enabled project creation, robust search capabilities, expert and location discovery for specialized topics, and an integrated Q&A system to connect users with relevant experts. This solution improved cross-functional communication, accelerated innovation, and fostered a more efficient exchange of knowledge across departments.',
+      technologies: ['Typescript', 'React', 'Next.js', 'MUI', 'AWS'],
+      links: [
+        {
+          type: 'Closed Source',
+          href: '',
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: '/innovationhub-screenshot.webp',
+      video: '',
+    },
   ],
 } as const
