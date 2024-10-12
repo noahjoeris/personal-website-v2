@@ -167,6 +167,7 @@ export default function Page() {
                   href={project.href}
                   key={project.title}
                   title={project.title}
+                  client={project.client}
                   description={project.description}
                   dates={project.dates}
                   tags={project.technologies}

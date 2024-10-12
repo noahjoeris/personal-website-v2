@@ -8,6 +8,7 @@ import Markdown from 'react-markdown'
 interface Props {
   title: string
   href?: string
+  client?: string
   description: string
   dates: string
   tags: readonly string[]
@@ -25,6 +26,7 @@ interface Props {
 export function ProjectCard({
   title,
   href,
+  client,
   description,
   dates,
   tags,
@@ -51,6 +53,7 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
+
         {image && (
           <Image
             src={image}
@@ -61,10 +64,16 @@ export function ProjectCard({
           />
         )}
       </Link>
+
       <CardHeader className="px-2">
         <div className="space-y-1">
           <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
+          <div className="font-sans text-xs">
+            {client} {'('}
+            <time className="font-sans text-xs">{dates}</time>
+            {')'}
+          </div>
+
           <div className="hidden font-sans text-xs underline print:visible">
             {link?.replace('https://', '').replace('www.', '').replace('/', '')}
           </div>
@@ -73,6 +82,7 @@ export function ProjectCard({
           </Markdown>
         </div>
       </CardHeader>
+
       <CardContent className="mt-auto flex flex-col px-2">
         {tags && tags.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
@@ -84,6 +94,7 @@ export function ProjectCard({
           </div>
         )}
       </CardContent>
+
       <CardFooter className="px-2 pb-2">
         {links && links.length > 0 && (
           <div className="flex flex-row flex-wrap items-start gap-1">

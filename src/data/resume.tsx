@@ -149,6 +149,7 @@ export const DATA = {
     {
       title: 'Turtle',
       href: 'https://app.turtle.cool',
+      client: 'Velocity Labs',
       dates: 'May 2024 - Present',
       active: true,
       description: 'Universal token transfer app for the Polkadot ecosystem.',
@@ -185,6 +186,7 @@ export const DATA = {
     {
       title: 'Innovation Hub',
       href: '',
+      client: 'Airbus Defence and Space',
       dates: 'Apr 2023 - Apr 2024',
       active: false,
       description:
