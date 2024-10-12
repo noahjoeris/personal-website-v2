@@ -2,11 +2,11 @@ import BlurFade from '@/components/magicui/blur-fade'
 import BlurFadeText from '@/components/magicui/blur-fade-text'
 import { ProjectCard } from '@/components/project-card'
 import { ResumeCard } from '@/components/resume-card'
+import ThemeImage from '@/components/ThemeImage'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import ShineBorder from '@/components/ui/shine-border'
 import { DATA } from '@/data/resume'
-import Image from 'next/image'
 import Markdown from 'react-markdown'
 
 const BLUR_FADE_DELAY = 0.04
@@ -26,7 +26,17 @@ export default function Page() {
               />
 
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <Image src={'/signature.png'} alt={DATA.name} width={400} height={400} />
+                {DATA.nameLogoUrl ? (
+                  <ThemeImage
+                    src={DATA.nameLogoUrl}
+                    alt={DATA.name}
+                    width={400}
+                    height={400}
+                    classnameDark="invert"
+                  />
+                ) : (
+                  <h2>{DATA.name}</h2>
+                )}
               </BlurFade>
 
               <BlurFade
@@ -35,7 +45,13 @@ export default function Page() {
               >
                 <span>{DATA.role}</span>
                 {DATA.companyLogoUrl && (
-                  <Image src={DATA.companyLogoUrl} alt={'company logo'} width={160} height={160} />
+                  <ThemeImage
+                    src={DATA.companyLogoUrl}
+                    srcDark={DATA.companyLogoUrlDark}
+                    alt={'company logo'}
+                    width={160}
+                    height={160}
+                  />
                 )}
               </BlurFade>
             </div>

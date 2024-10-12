@@ -8,7 +8,11 @@ export const DATA = {
   location: 'Sofia, Bulgaria',
   locationLink: '',
   role: 'Fullstack Blockchain Engineer',
+  nameLogoUrl: '/signature.png',
+
   companyLogoUrl: '/polkadot.svg',
+  companyLogoUrlDark: '/polkadot-white.svg',
+
   summary:
     "Hello, I'm Noah, a software magician at Velocity Labs, specializing in React and Rust. \
   I'm responsible for building amazing apps and tools that boost the adoption of the Polkadot ecosystem.\n\n\
