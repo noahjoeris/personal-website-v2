@@ -148,7 +148,8 @@ export const DATA = {
       client: 'Velocity Labs',
       dates: 'May 2024 - Present',
       active: true,
-      description: 'Universal token transfer app for the Polkadot ecosystem.',
+      description:
+        'Turtle is a universal token transfer application for the Polkadot ecosystem, supporting transfers between Ethereum and Polkadot, as well as XCM transfers between parachains. Soon, Turtle will be available as a widget for easy integration into any dApp. Additionally, a Turtle SDK will be launched to further streamline the bridging experience and reduce fragmentation across the ecosystem.',
       technologies: [
         'Typescript',
         'React',
@@ -157,6 +158,7 @@ export const DATA = {
         'Shadcn UI',
         'Polkadot',
         'XCM',
+        'Snowbridge',
       ],
       links: [
         {
