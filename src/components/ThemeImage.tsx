@@ -2,7 +2,7 @@
 import { cn } from '@/utils/cn'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 interface ThemeImageProps {
   src?: string
@@ -27,10 +27,18 @@ const ThemeImage: FC<ThemeImageProps> = ({
   width,
   height,
 }) => {
-  const { theme } = useTheme()
-  const imageSrc = theme === 'dark' ? srcDark || src : srcLight || src
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  const imageSrc = resolvedTheme === 'dark' ? srcDark || src : srcLight || src
   const imageClassname =
-    theme === 'dark' ? cn(classnameDark, classname) : cn(classnameLight, classname)
+    resolvedTheme === 'dark' ? cn(classnameDark, classname) : cn(classnameLight, classname)
 
   return (
     <Image src={imageSrc!} alt={alt} width={width} height={height} className={imageClassname} />
