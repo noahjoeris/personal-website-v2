@@ -182,6 +182,43 @@ export const DATA = {
     },
 
     {
+      title: 'Lastic Coretime Marketplace',
+      href: 'https://www.lastic.xyz/kusama/my-cores',
+      client: 'Lastic',
+      dates: 'Feb 2024 - Jul 2024',
+      active: false,
+      description: 'todo',
+      technologies: [
+        'Typescript',
+        'React',
+        'Next.js',
+        'TailwindCSS',
+        'Polkadot',
+        'XCM',
+        'Solidity',
+      ],
+      links: [
+        {
+          type: 'Website',
+          href: 'https://www.lastic.xyz',
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: 'App',
+          href: 'https://www.lastic.xyz/kusama/my-cores',
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: 'Source',
+          href: 'https://github.com/LasticXYZ/LasticUI',
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: '/lastic.webp',
+      video: '',
+    },
+
+    {
       title: 'Innovation Hub',
       href: '',
       client: 'Airbus Defence and Space',
