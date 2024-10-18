@@ -187,7 +187,8 @@ export const DATA = {
       client: 'Lastic',
       dates: 'Feb 2024 - Jul 2024',
       active: false,
-      description: 'todo',
+      description:
+        'I supported the Lastic team in building the first Polkadot coretime marketplace. This included implementing core interlacing, which allows users to adjust their coretime usage frequency and sell unused time as NFTs. I also developed core partitioning, enabling the division of a coretime NFT into smaller portions for resale. Additionally, I deployed a Solidity-based crowdfunding contract on Moonbeam, allowing multiple parties to jointly purchase coretime. Finally, I worked on a proof-of-concept for a multisignature coretime marketplace, enabling secure coretime trading via a 2/3 multisig wallet with Lastic as a trusted third party.',
       technologies: [
         'Typescript',
         'React',
