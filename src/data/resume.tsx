@@ -220,6 +220,20 @@ export const DATA = {
     },
 
     {
+      title: 'PBA Projects',
+      href: '',
+      client: 'Polkadot Blockchain Academy',
+      dates: 'Jan 2024 - Feb 2024',
+      active: false,
+      description:
+        'I have built several Rust-based projects, each highlighting different aspects of blockchain development, cryptography, and systems programming. These include a Many Time Pad Cracker, a tool designed to crack OTP encryption vulnerable to reused keys; a blockchain developed from scratch, complete with consensus mechanisms and data structures; a UTXO chain node capable of handling blockchain reorgs and maintaining data consistency; a multi-token treasury pallet within the Substrate framework, designed for managing several tokens and spend proposals; and a Merkle multi-proof generator that generates cryptographic proofs for verifying multiple claims in a single Merkle tree efficiently.',
+      technologies: ['Rust', 'Substrate', 'XCM', 'Polkadot', 'Blockchain', 'Cryptography', 'UTXO'],
+      links: [],
+      image: '/pba-projects.webp',
+      video: '',
+    },
+
+    {
       title: 'Innovation Hub',
       href: '',
       client: 'Airbus Defence and Space',
