@@ -13,6 +13,8 @@ export const DATA = {
   companyLogoUrl: '/polkadot.svg',
   companyLogoUrlDark: '/polkadot-white.svg',
 
+  highlightedLinks: [{ href: '/blog', icon: NotebookIcon, label: 'Blog' }],
+
   summary:
     "Hey, I’m Noah, a freelance software engineer specializing in React and Rust within the Polkadot ecosystem. I’m driven by the vision of building the future of Web3, and I currently work at Velocity Labs, where I’ve been developing 'Turtle' - a universal bridge app for Polkadot, addressing fragmented UX and DevEx of the ecosystem.\n\n\
   I’ve been deeply involved in the crypto space since 2021, exploring different blockchain protocols, dApps, and hardware wallets. After graduating from the Polkadot Blockchain Academy in early 2024, where I was mentored by core Polkadot developers, I became convinced that Polkadot embodies the Web3 values I stand by: resilience, security, scalability, and governance.\n\n\

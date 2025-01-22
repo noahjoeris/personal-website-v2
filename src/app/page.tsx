@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import ShineBorder from '@/components/ui/shine-border'
 import { DATA } from '@/data/resume'
+import Link from 'next/link'
 import Markdown from 'react-markdown'
 
 const BLUR_FADE_DELAY = 0.04
@@ -70,6 +71,19 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
+      </section>
+
+      <section id="highlighted-links">
+        <BlurFade delay={BLUR_FADE_DELAY * 2}>
+          {DATA.highlightedLinks.map(link => (
+            <Link key={link.href} href={link.href}>
+              <Badge className="flex max-w-32 justify-center gap-2 px-2 py-1">
+                <link.icon className="size-4" />
+                {link.label}
+              </Badge>
+            </Link>
+          ))}
+        </BlurFade>
       </section>
 
       <section id="about">
