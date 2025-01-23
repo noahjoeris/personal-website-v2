@@ -13,14 +13,17 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: {
-    slug: string
-  }
+  params: Promise<{ slug: string }>
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug)
+  const { slug } = await params // Await params here
+  const post = await getPost(slug)
 
-  let { title, publishedAt: publishedTime, summary: description, image } = post.metadata
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`
+  if (!post) {
+    notFound()
+  }
+
+  const { title, publishedAt: publishedTime, summary: description, image } = post.metadata
+  const ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`
 
   return {
     title,
@@ -31,11 +34,7 @@ export async function generateMetadata({
       type: 'article',
       publishedTime,
       url: `${DATA.url}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -46,14 +45,9 @@ export async function generateMetadata({
   }
 }
 
-export default async function Blog({
-  params,
-}: {
-  params: {
-    slug: string
-  }
-}) {
-  let post = await getPost(params.slug)
+export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params // Await params here
+  const post = await getPost(slug)
 
   if (!post) {
     notFound()
