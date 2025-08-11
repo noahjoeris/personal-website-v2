@@ -10,33 +10,80 @@ export default function ParticlesBackground() {
   useEffect(() => {
     initParticlesEngine(async engine => {
       await loadFull(engine)
-    }).then(() => {
-      setInit(true)
-    })
+    }).then(() => setInit(true))
   }, [])
 
   if (!init) return null
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0">
-      <Particles
-        id="tsparticles"
-        options={{
-          background: { color: 'transparent' },
-          particles: {
-            number: { value: 100 },
-            color: { value: '#ffffff' },
-            size: { value: 2 },
-            move: { enable: true, speed: 1 },
-            links: { enable: true, opacity: 0.4, color: '#ffffff' },
-            opacity: { value: 0.5 },
+    <Particles
+      className="pointer-events-none fixed inset-0 z-0"
+      id="tsparticles"
+      options={{
+        background: { color: 'transparent' },
+        detectRetina: true,
+        fpsLimit: 120,
+        interactivity: {
+          detectsOn: 'window',
+          events: {
+            onHover: { enable: true, mode: 'bubble' },
+            onClick: { enable: true, mode: 'push' },
+            resize: { enable: true, delay: 0.5 },
           },
-          interactivity: {
-            events: { onHover: { enable: true, mode: 'repulse' } },
-            modes: { repulse: { distance: 100 } },
+          modes: {
+            bubble: {
+              distance: 300,
+              duration: 2,
+              opacity: 1,
+              size: 40,
+              mix: false,
+            },
+            push: { quantity: 3 },
           },
-        }}
-      />
-    </div>
+        },
+        particles: {
+          number: { value: 50, density: { enable: true } },
+          opacity: { value: 0 },
+          shape: {
+            type: 'image',
+            options: {
+              image: [
+                {
+                  src: '/bitcoin.svg', // change to your SVG path
+                  width: 32,
+                  height: 32,
+                },
+              ],
+            },
+          },
+          size: {
+            value: { min: 9, max: 20 },
+            animation: {
+              enable: true,
+              speed: 3,
+              sync: false,
+            },
+          },
+
+          rotate: {
+            value: { min: 0, max: 360 },
+            direction: 'random',
+            animation: { enable: true, speed: 5, sync: false },
+          },
+          move: {
+            enable: true,
+            speed: { min: 1, max: 3 }, // faster spread
+            direction: 'none',
+            random: true,
+            straight: false,
+            outModes: { default: 'destroy' },
+            angle: {
+              value: 360,
+              offset: 0,
+            },
+          },
+        },
+      }}
+    />
   )
 }

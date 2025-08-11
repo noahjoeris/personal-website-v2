@@ -23,9 +23,6 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.2.7
         version: 1.2.7(@types/react-dom@19.1.7(@types/react@19.1.10))(@types/react@19.1.10)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
-      '@tsparticles/engine':
-        specifier: ^3.9.1
-        version: 3.9.1
       '@tsparticles/react':
         specifier: ^3.0.0
         version: 3.0.0(@tsparticles/engine@3.9.1)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -96,6 +93,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@3.4.17)
+      '@tsparticles/engine':
+        specifier: ^3.9.1
+        version: 3.9.1
       '@types/node':
         specifier: ^24.2.1
         version: 24.2.1
