@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { loadFull } from 'tsparticles'
@@ -38,7 +37,7 @@ export default function ParticlesBackground() {
               size: 40,
               mix: false,
             },
-            push: { quantity: 3 },
+            push: { quantity: 1 },
           },
         },
         particles: {
@@ -76,7 +75,7 @@ export default function ParticlesBackground() {
             direction: 'none',
             random: true,
             straight: false,
-            outModes: { default: 'destroy' },
+            outModes: { default: 'bounce' },
             angle: {
               value: 360,
               offset: 0,
