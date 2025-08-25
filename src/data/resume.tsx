@@ -16,11 +16,10 @@ export const DATA = {
   highlightedLinks: [{ href: '/blog', icon: NotebookIcon, label: 'Blog' }],
 
   summary:
-    "Hey, I’m Noah, a freelance software engineer specializing in React and Rust within the Polkadot ecosystem. I’m driven by the vision of building the future of Web3, and I currently work at Velocity Labs, where I’ve been developing 'Turtle' - a universal bridge app for Polkadot, addressing fragmented UX and DevEx of the ecosystem.\n\n\
-  I’ve been deeply involved in the crypto space since 2021, exploring different blockchain protocols, dApps, and hardware wallets. After graduating from the Polkadot Blockchain Academy in early 2024, where I was mentored by core Polkadot developers, I became convinced that Polkadot embodies the Web3 values I stand by: resilience, security, scalability, and governance.\n\n\
-  I’m on a mission to contribute to this decentralized web, with less trust and more truth. A web free from big tech gatekeeping, with a financial layer that ensures equal access for everyone - protecting human freedom at its core.\n\n\
-  Before joining the Polkadot ecosystem, I spent nearly 5 years at Airbus, where I contributed to projects in cybersecurity, cloud computing, and blockchain. I engineered software solutions, particularly in React, and helped innovate across several departments.\n\n\
-  Outside of work, I’m dedicated to calisthenics, cold plunges, and biohacking, constantly exploring ways to improve myself. I also study Stoic philosophy, which fuels my approach to life and work. I'm always happy to connect with new people - so feel free to reach out!",
+    'Hey, I’m Noah, a freelance software engineer working with React and Rust. I specialize in blockchain applications and am currently deepening my expertise in Bitcoin.\n\n\
+  I’ve completed two Bitcoin bootcamps and now focus on mastering the Lightning Network, while actively working with Bitcoin nodes, scripting, and Lightning development. My work is driven by Bitcoin’s cypherpunk values, building tools that strengthen financial freedom and digital resilience, with the conviction that Bitcoin is the most superior form of money in existence. I’m on a mission to support its success with my expertise.\n\n\
+  I currently work with Velocity Labs in the Polkadot ecosystem, where I lead development of Turtle, a universal bridge app improving UX and liquidity across chains. Before that, I spent nearly five years at Airbus, contributing to projects in cybersecurity, cloud, and blockchain innovation.\n\n\
+  Outside of engineering, I’m dedicated to calisthenics, cold plunges, and biohacking, always testing ways to sharpen mind and body. I also study Stoic philosophy, which shapes my approach to both life and work. Always happy to connect with fellow builders and Bitcoiners — feel free to reach out',
   avatarUrl: '/me.jpg',
   skills: [
     'Blockchain',
