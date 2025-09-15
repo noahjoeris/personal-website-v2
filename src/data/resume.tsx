@@ -16,10 +16,10 @@ export const DATA = {
   highlightedLinks: [{ href: '/blog', icon: NotebookIcon, label: 'Blog' }],
 
   summary:
-    'Hey, I’m Noah, a freelance software engineer working with React and Rust. I specialize in blockchain applications and am currently deepening my expertise in Bitcoin.\n\n\
-  I’ve completed two Bitcoin bootcamps and now focus on mastering the Lightning Network, while actively working with Bitcoin nodes, scripting, and Lightning development. My work is driven by Bitcoin’s cypherpunk values, building tools that strengthen financial freedom and digital resilience, with the conviction that Bitcoin is the most superior form of money in existence. I’m on a mission to support its success with my expertise.\n\n\
+    'I’m Noah, a freelance software engineer working with React and Rust. I specialize in blockchain applications and am currently deepening my expertise in Bitcoin.\n\n\
   I currently work with Velocity Labs in the Polkadot ecosystem, where I lead development of Turtle, a universal bridge app improving UX and liquidity across chains. Before that, I spent nearly five years at Airbus, contributing to projects in cybersecurity, cloud, and blockchain innovation.\n\n\
-  Outside of engineering, I’m dedicated to calisthenics, cold plunges, and biohacking, always testing ways to sharpen mind and body. I also study Stoic philosophy, which shapes my approach to both life and work. Always happy to connect with fellow builders and Bitcoiners — feel free to reach out',
+  I’ve completed two intensive Bitcoin training programs and now focus on mastering the Lightning Network, while actively working with Bitcoin nodes, scripting, and Lightning development. My work is guided by cypherpunk values, building tools that strengthen financial freedom and digital resilience. I’m convinced Bitcoin is the most advanced form of money ever created, and I’m on a mission to support its success with my expertise.\n\n\
+  Outside of engineering, I’m dedicated to calisthenics, cold plunges, and biohacking, always testing ways to sharpen mind and body. I’m also a fan of Stoicism, which shapes my approach to both life and work. Always happy to connect with fellow blockchain people — feel free to reach out',
   avatarUrl: '/me.jpg',
   skills: [
     'Blockchain',
