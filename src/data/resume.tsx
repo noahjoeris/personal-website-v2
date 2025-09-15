@@ -22,6 +22,7 @@ export const DATA = {
   Outside of engineering, I’m dedicated to calisthenics, cold plunges, and biohacking, always testing ways to sharpen mind and body. I’m also a fan of Stoicism, which shapes my approach to both life and work. Always happy to connect with fellow blockchain people — feel free to reach out',
   avatarUrl: '/me.jpg',
   skills: [
+    'Bitcoin',
     'Blockchain',
     'Polkadot',
     'Substrate',
